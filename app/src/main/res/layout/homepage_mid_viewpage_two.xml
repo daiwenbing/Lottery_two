@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zsr="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zhengsr.viewpagerlib.view.BannerViewPager
+            android:id="@+id/loop_viewpager_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            zsr:banner_isloop="true"
+            zsr:banner_loop_max_count="3"
+            zsr:banner_switchtime="600" />
+
+        <com.zhengsr.viewpagerlib.indicator.TransIndicator
+            android:id="@+id/bottom_text_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom|center"
+            android:layout_marginRight="10dp"
+            zsr:trans_defaultcolor="@color/blanchedalmond"
+            zsr:trans_leftmargin="10dp"
+            zsr:trans_movecolor="@color/orange"
+            zsr:trans_type="round"
+            zsr:trans_round_radius="4dp"
+            zsr:trans_width="15dp"
+            zsr:trans_height="5dp"/>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zsr="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:clipChildren="false">
+
+        <com.zhengsr.viewpagerlib.view.BannerViewPager
+            android:id="@+id/loop_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:clipChildren="false"
+            zsr:banner_isloop="true"
+            zsr:banner_looptime="3000"
+            zsr:banner_switchtime="600" />
+
+        <com.zhengsr.viewpagerlib.indicator.ZoomIndicator
+            android:id="@+id/bottom_scale_layout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            zsr:zoom_alpha_min="0.5"
+            zsr:zoom_leftmargin="10dp"
+            zsr:zoom_max="1.5"
+            zsr:zoom_selector="@mipmap/circle_blude_select" />
+    </FrameLayout>
+</LinearLayout>

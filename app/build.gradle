@@ -1,0 +1,85 @@
+apply plugin: 'com.android.application'
+//注解
+apply plugin: 'com.jakewharton.butterknife'
+android {
+    compileSdkVersion 26
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    //升级3.0打包错误 添加如下配置就ok了
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    //配置keystore签名
+    signingConfigs {
+        release {
+            storeFile file("C:/Users/dwb/Desktop.jks")
+            storePassword "402372"
+            keyAlias "dwb"
+            keyPassword "402372"
+        }
+    }
+    defaultConfig {
+        applicationId "com.dwb.lottery.two"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            //设置id可以同时安装多个
+//            applicationIdSuffix "debug"
+//            applicationIdSuffix "debug_two"
+            signingConfig signingConfigs.release
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            outputFileName=" ${variant.applicationId}_${ buildType.name}_${defaultConfig.versionName}.apk"
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation files('libs/volley.jar')
+    implementation files('libs/gson-2.2.4.jar')
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //检测更新
+    compile 'com.allenliu.versionchecklib:library:1.7.6'
+    //滚动textview
+    compile 'com.sunfusheng:marqueeview:1.3.3'
+    //6.0以上权限检测
+    implementation files('libs/andpermission.jar')
+    compile 'com.squareup.okhttp3:okhttp:3.5.0'
+    implementation files('libs/org.apache.http.legacy.jar')
+    //动画
+    implementation files('libs/nineoldandroids-2.4.0.jar')
+    //butterknife注解
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+
+    compile 'com.github.LillteZheng:ViewPagerHelper:v0.5'
+
+}

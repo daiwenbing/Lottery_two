@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:shape="rectangle">
+    <solid android:color="@color/hpmepagelistitem_img_card"/>
+    <corners android:radius="5dp"/>
+    <gradient
+        android:startColor="@color/cyan"
+        android:endColor="@color/aqua"/>
+</shape>

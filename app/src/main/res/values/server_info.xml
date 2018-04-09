@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bredpou_folder">lottery_one/</string>
+    <string name="cache_folder">cache/</string>
+    <string name="thumbnails_folder">.thumbnails/</string>
+    <string name="error_folder">error/</string>  
+</resources>

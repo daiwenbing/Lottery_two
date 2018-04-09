@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">北京时时彩III</string>
+
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_no_mormal">没有更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+
+    <string name="goback">返回</string>
+    <string name="dialog_message">加载中...</string>
+    <string name="net_error1">网络断开，请检查网络连接是否正常</string>
+    <string name="net_error2">服务器连接异常</string>
+    <string name="net_error3">数据解析异常</string>
+
+    <string name="login_title">密码登录</string>
+    <string name="homepage_text_a1">开奖信息</string>
+    <string name="homepage_text_a2">公告信息</string>
+    <string name="login_activity_phonenum">请输入您的手机号码</string>
+    <string name="feeback_txt_hint">我们正在倾听您的建议...</string>
+    <string name="load_message">正在下载...</string>
+    <string name="update_name">检测到新的版本</string>
+</resources>

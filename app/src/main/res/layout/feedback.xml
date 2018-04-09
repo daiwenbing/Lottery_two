@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    <include
+        android:id="@+id/include"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/alltitle_back_title" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_editext_style">
+                <ImageView
+                    android:id="@+id/imglogin_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/login_regist_accountnumber"/>
+
+                <com.dwb.lottery_two.style.BiuEditText
+                    android:id="@+id/peeback_phonenum"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/forget_login_edittext_height"
+                    android:layout_toRightOf="@id/imglogin_name"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:hint="@string/login_activity_phonenum"
+                    android:maxLength="11"
+                    android:inputType="phone"
+                    android:paddingLeft="10dp"
+                    android:textColorLink="@color/hui_1"
+                    android:textSize="@dimen/TextSize_15" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:background="@drawable/feeback_editext_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:gravity="top|left"
+                    android:id="@+id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/regist_success_btn_width"
+                    android:background="@null"
+                    android:hint="@string/feeback_txt_hint"
+                    android:imeOptions="actionDone"
+                    android:padding="10dp"
+                    android:textColorLink="#A9A9A9"
+                    android:textSize="@dimen/TextSize_15" />
+            </RelativeLayout>
+        <Button
+            android:id="@+id/submit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/regist_success_img_margin_top"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/login_button_style"
+            android:layout_marginTop="30dp"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/TextSize_20"/>
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>
